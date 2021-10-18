@@ -102,35 +102,37 @@ namespace Loops
         {
             string[] todo = {"respond to email", "make wireframe", "program feature", "fix bugs"};
       
-      foreach (string item in todo)
-      {
-        CreateTodoItem(item);
-      }
+            foreach (string item in todo)
+            {CreateTodoItem(item);}
         }
         static void CreateTodoItem(string item)
-    {
-      Console.WriteLine($"[] {item}");
-    }
+        {Console.WriteLine($"[] {item}");}
 
         // Comparing Loops
         static void ComparingLoops()
         {
             string[] websites = { "twitter", "facebook", "gmail" };
       
-      foreach (string site in websites)
-      { 
-        CreateSite(site);
-      }
+            foreach (string site in websites)
+            {CreateSite(site);}
         }
         static void CreateSite(string site)
-    {
-      Console.WriteLine(site);
-    }
+        {Console.WriteLine(site);}
 
         // Jump Statements
         static void JumpStatements()
         {
-            
+            bool buttonClick = true;
+            int timesRinged = 0;
+
+            do
+            {
+                Console.WriteLine("BLARRRRR");
+                timesRinged++;
+                if (timesRinged == 3)
+                {break;}
+            }
+            while(!buttonClick);
         }
 
     }
